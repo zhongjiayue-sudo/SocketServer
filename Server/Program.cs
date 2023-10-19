@@ -48,6 +48,7 @@ public class ChatRoomServer
         try
         {
             Socket socket = (Socket)asyncResult.AsyncState;//将accept到的Socket解析出来.解析一个Socket表示已经连接了一个客户端
+            Console.WriteLine($"Connected: {socket.RemoteEndPoint}");
             Socket client = socket.EndAccept(asyncResult);//Scoket中的数据存在client里，终止
             ClientInfo info = new(client);
             client.BeginReceive(info.buffer, 0, 1024, 0, ReceiveCallBack, info);//info句柄，带有Socket就行
@@ -70,6 +71,7 @@ public class ChatRoomServer
             //发送消息给现已连接的客户端
             foreach (var c in clients)
                 c.socket.Send(client.buffer, 0, count, 0);
+            Console.WriteLine($"Received: {System.Text.Encoding.UTF8.GetString(client.buffer, 0, count)}");
             client.socket.BeginReceive(client.buffer, 0, 1024, 0, ReceiveCallBack, client);//继续异步接收
         }
         catch (Exception ex)
