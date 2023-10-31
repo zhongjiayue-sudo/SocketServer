@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Jd5wcPwEHXn6uMUDs9GWo6llmN0tE9zix4bvG1Zozu4PEjItaukqPyOqu5jCqmr03Hq3caj8rxY1l0UIkTUTxw==",
+  "dgSpecHash": "Z7O3zDGISVKXrgoJheQ+kst5kCv2Avp95M3R06+4u9r7IwQVrZDPVOKSX2rM+6Yzrz4Ktmap9k5DEjrlCcgfcw==",
   "success": true,
   "projectFilePath": "D:\\UnityLab\\Plugins\\Socket\\Server\\Server.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\mysqlconnector\\2.2.7\\mysqlconnector.2.2.7.nupkg.sha512"
+  ],
   "logs": []
 }
